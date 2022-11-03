@@ -4,7 +4,6 @@ class Solution:
         l = Counter(words)
         p_len = 0
         mid = 0
-        print(l)
         for word in l.keys():
             if word[0] == word[1]:
                 if l[word]%2 == 0:
@@ -12,9 +11,7 @@ class Solution:
                 else:
                     p_len += l[word]-1
                     mid = 1
-                    
             elif word[::-1] in l:
                 p_len += min(l[word], l[word[::-1]])
-        
         return (p_len + mid) * 2
             
