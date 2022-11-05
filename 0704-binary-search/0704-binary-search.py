@@ -2,8 +2,6 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         f=0
         left,right=0,len(nums)-1
-        nums.sort()
-        f=0
         while left<=right:
             mid=(left+right)//2
             if nums[mid]==target:
