@@ -3,6 +3,7 @@ class Solution:
         l=len(s)
         a=s[:l//2]
         b=s[l//2:]
+        #ACM
         vo=['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
         su=0
         sm=0
