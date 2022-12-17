@@ -1,4 +1,3 @@
-import operator as ops
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack=[]
@@ -22,4 +21,4 @@ class Solution:
                 
             else:
                 stack.append(i)
-        return int(stack[-1])
+        return int(stack[0])
