@@ -8,7 +8,6 @@ class Solution:
                 i+=1
             else:
                 return False
-        print(i)
         return True
                 
             
