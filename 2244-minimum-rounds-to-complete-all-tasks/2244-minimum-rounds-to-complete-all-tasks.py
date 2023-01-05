@@ -8,7 +8,7 @@ class Solution:
                 dic[tasks[i]]+=1
             else:
                 dic[tasks[i]]=1
-        p=0
+        """ p=0
         print(dic)
         for i in dic:
             #print(dic[i],i)
@@ -28,5 +28,11 @@ class Solution:
             return re
         else:
             return -1
-                
+                """
+        ans=0
+        for i in dic.values():
+            if i==1:
+                return -1
+            ans+=(i//3)+(i%3!=0)
+        return ans
                 
