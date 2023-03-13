@@ -19,6 +19,7 @@ class Solution:
             return False
 
         if left.val == right.val:
+            #print(left.val,right.val)
             outPair = self.isMirror(left.left, right.right)
             inPiar = self.isMirror(left.right, right.left)
             return outPair and inPiar
