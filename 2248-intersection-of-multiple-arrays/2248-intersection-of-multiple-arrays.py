@@ -2,6 +2,7 @@ class Solution:
     def intersection(self, nums: List[List[int]]) -> List[int]:
         l=len(nums)
         a=[]
+        #print(set(nums[0])&set(nums[1])&set(nums[2]))
         for i in nums:
             a+=i
         arr=[]
