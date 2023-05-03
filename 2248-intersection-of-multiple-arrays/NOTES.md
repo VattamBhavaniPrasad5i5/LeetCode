@@ -1,1 +1,1 @@
-set(nums[0])&set(nums[1]) used to find the common in two arrays
+​
