@@ -1,19 +1,15 @@
 class Solution:
-    def combine(self, n, k):
-        sol=[]
-        def backtrack(remain,comb,nex):
-			# solution found
-            if remain==0:
-                sol.append(comb.copy())
-            else:
-				# iterate through all possible candidates
-                for i in range(nex,n+1):
-					# add candidate
-                    comb.append(i)
-					#backtrack
-                    backtrack(remain-1,comb,i+1)
-					# remove candidate
-                    comb.pop()
-            
-        backtrack(k,[],1)
-        return sol
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        arr = []
+        nums = [0] * k
+
+        def backtrack(pos, cur):
+            if pos == k:
+                arr.append(nums[:])
+                return
+            for i in range(cur, n-k+pos+2):
+                nums[pos] = i
+                backtrack(pos+1, i+1)
+
+        backtrack(0, 1)
+        return arr
