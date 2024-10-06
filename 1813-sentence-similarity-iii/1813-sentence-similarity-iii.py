@@ -24,5 +24,5 @@ class Solution(object):
             j += 1
         
         # If the matched prefix and suffix together cover all of words1, return true
-        return i + j >= len(words1)
+        return i+j  >= len(words1)
         
